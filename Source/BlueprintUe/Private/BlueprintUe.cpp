@@ -146,11 +146,11 @@ void FBlueprintUeModule::RegisterSettings()
 
 		SettingsContainer->DescribeCategory("blueprintUE",
 			LOCTEXT("RuntimeWDCategoryName", "blueprintUE"),
-			LOCTEXT("RuntimeWDCategoryDescription", "Example Category from Slate Guide"));
+			LOCTEXT("RuntimeWDCategoryDescription", "blueprintUE Category"));
 
 		ISettingsSectionPtr SettingsSection = SettingsModule->RegisterSettings("Project", "Plugins", "blueprintUE",
 			LOCTEXT("RuntimeGeneralSettingsName", "blueprintUE"),
-			LOCTEXT("RuntimeGeneralSettingsDescription", "An example settings panel from Slate Guide."),
+			LOCTEXT("RuntimeGeneralSettingsDescription", "Configure the blueprintUE plugin."),
 			GetMutableDefault<UBlueprintUeSettings>()
 		);
 
