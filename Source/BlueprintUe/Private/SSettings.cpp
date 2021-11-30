@@ -10,6 +10,11 @@ void SSettings::Construct( const FArguments& InArgs )
 	Hostname = InArgs._Hostname;
 	OnSaveSuccess = InArgs._OnSaveSuccess;
 
+	if (Hostname == "")
+	{
+		Hostname = "https://blueprintue.com";
+	}
+
 	ChildSlot
 	[
 		SNew(SScrollBox)
