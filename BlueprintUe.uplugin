@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "BlueprintUE",
+	"Description": "blueprintUE is an unofficial tool with the intent of helping Unreal Engine developers",
+	"Category": "Tool",
+	"CreatedBy": "Rancoud",
+	"CreatedByURL": "https://blueprintue.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "https://discord.com/invite/VTHz4pU",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "BlueprintUe",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}

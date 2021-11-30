@@ -1,0 +1,60 @@
+# Unreal Generated Files
+Binaries/*
+Build/*
+!Build/**/*.ico
+DerivatedDataCache/*
+Intermediate/*
+Saved/*
+SourceArt/**/*.png
+SourceArt/**/*.tga
+
+# Visual Studio and Xcode Generated Files
+*.a
+*.app
+*.dll
+*.dylib
+*.exe
+*.gch
+*.ipa
+*.la
+*.lai
+*.lib
+*.lo
+*.mod
+*.o
+*.obj
+*.opensdf
+*.out
+*.pch
+*.sdf
+*.sln
+*.slo
+*.so
+*.suo
+*.VC.db
+*.VC.opendb
+*.xcodeproj
+.vs/*
+
+# CLion
+.idea/*
+CMakeLists.txt
+cmake-build-debug/*
+*CodeCompletionFolders.txt
+*CodeLitePreProcessor.txt
+*.workspace
+
+# Windows
+ehthumbs.db
+ehthumbs_vista.db
+Thumbs.db
+
+# macOS
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+*.DS_Store
+.LSOverride
+Network Trash Folder
+Temporary Items
