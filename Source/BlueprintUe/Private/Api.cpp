@@ -24,15 +24,15 @@ void Api::CreateBlueprint(TFunction<void(FString, TSharedPtr<FJsonObject>)> OnSu
 	}
 	else if (Expiration == "1 hour")
 	{
-		Expiration = "1h";
+		Expiration = "3600";
 	}
 	else if (Expiration == "1 day")
 	{
-		Expiration = "1d";
+		Expiration = "86400";
 	}
 	else if (Expiration == "1 week")
 	{
-		Expiration = "1w";
+		Expiration = "604800";
 	}
 	
 	const FString PostContent = FString::Printf(TEXT("title=%s&exposure=%s&expiration=%s&version=%s&blueprint=%s"),
