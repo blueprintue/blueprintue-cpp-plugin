@@ -4,7 +4,7 @@
 
 void FBlueprintUeCommands::RegisterCommands()
 {
-	UI_COMMAND(OpenPluginWindow, "blueprintUE", "Open blueprintUE", EUserInterfaceActionType::Button, FInputGesture());
+	UI_COMMAND(OpenPluginWindow, "blueprintUE", "Open blueprintUE", EUserInterfaceActionType::Button, FInputChord());
 }
 
 #undef LOCTEXT_NAMESPACE
