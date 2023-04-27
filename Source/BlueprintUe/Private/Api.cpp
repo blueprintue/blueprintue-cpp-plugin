@@ -3,7 +3,7 @@
 #include "Interfaces/IHttpResponse.h"
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonSerializer.h"
-#include "Windows/WindowsPlatformHttp.h"
+#include "GenericPlatform/GenericPlatformHttp.h"
 
 void Api::CreateBlueprint(TFunction<void(FString, TSharedPtr<FJsonObject>)> OnSuccessDelegate, TFunction<void(FString)> OnErrorDelegate, FString Title, FString Exposure, FString Expiration, FString UEVersion, FString Blueprint)
 {
@@ -36,11 +36,11 @@ void Api::CreateBlueprint(TFunction<void(FString, TSharedPtr<FJsonObject>)> OnSu
 	}
 	
 	const FString PostContent = FString::Printf(TEXT("title=%s&exposure=%s&expiration=%s&version=%s&blueprint=%s"),
-		*FPlatformHttp::UrlEncode(Title),
-		*FPlatformHttp::UrlEncode(Exposure),
-		*FPlatformHttp::UrlEncode(Expiration),
-		*FPlatformHttp::UrlEncode(UEVersion),
-		*FPlatformHttp::UrlEncode(Blueprint)
+		*FGenericPlatformHttp::UrlEncode(Title),
+		*FGenericPlatformHttp::UrlEncode(Exposure),
+		*FGenericPlatformHttp::UrlEncode(Expiration),
+		*FGenericPlatformHttp::UrlEncode(UEVersion),
+		*FGenericPlatformHttp::UrlEncode(Blueprint)
 	);
 	HttpRequest->SetContentAsString(PostContent);
 	
