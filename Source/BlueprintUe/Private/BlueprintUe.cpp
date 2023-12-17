@@ -4,9 +4,9 @@
 #include "BlueprintUeSettings.h"
 #include "LevelEditor.h"
 #include "SMain.h"
-#include "Settings/Public/ISettingsModule.h"
-#include "Settings/Public/ISettingsContainer.h"
-#include "Settings/Public/ISettingsSection.h"
+#include "Developer/Settings/Public/ISettingsModule.h"
+#include "Developer/Settings/Public/ISettingsContainer.h"
+#include "Developer/Settings/Public/ISettingsSection.h"
 #include "Widgets/Docking/SDockTab.h"
 #include "ToolMenus.h"
 
