@@ -104,7 +104,7 @@ private:
 		UEVersion = VERSION_STRINGIFY(ENGINE_MAJOR_VERSION) VERSION_TEXT(".") VERSION_STRINGIFY(ENGINE_MINOR_VERSION);
 		UEVersionOptions.Empty();
 		int currentUEVersionIndex = 0;
-		for (int i = 3; i >= 0; --i)
+		for (int i = 4; i >= 0; --i)
 		{
 			FString tmpUEVersion = FString::Printf(TEXT("5.%d"), i);
 			UEVersionOptions.Add(MakeShareable(new FString(tmpUEVersion)));
