@@ -3,6 +3,7 @@
 #include "Api.h"
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
 #include "Widgets/Layout/SScrollBox.h"
+#include "BlueprintUe.h"
 
 void SCreateBlueprint::Construct( const FArguments& InArgs )
 {
@@ -276,8 +277,8 @@ FReply SCreateBlueprint::CreateFromSlate()
 	CurrentError = "";
 	CreateButton->SetEnabled(false);
 
-	Api* API = new Api();
-	API->CreateBlueprint(OnAPISuccess, OnAPIError, Title, *CurrentExposure, *CurrentExpiration, *CurrentUEVersion, Blueprint);
+	Api& Api = FBlueprintUeModule::Get().GetApi();
+	Api.CreateBlueprint(OnAPISuccess, OnAPIError, Title, *CurrentExposure, *CurrentExpiration, *CurrentUEVersion, Blueprint);
 
 	return FReply::Handled();
 }
