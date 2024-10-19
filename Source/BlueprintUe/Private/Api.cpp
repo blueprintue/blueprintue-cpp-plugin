@@ -14,8 +14,8 @@ void Api::CreateBlueprint(TFunction<void(FString, TSharedPtr<FJsonObject>)> OnSu
 	HttpRequest->SetURL(Settings->Hostname + "/api/upload");
 	HttpRequest->SetVerb("POST");
 	HttpRequest->SetTimeout(1000);
-	HttpRequest->SetHeader("X-Token",Settings->ApiKey);
-	HttpRequest->SetHeader("Content-Type","application/x-www-form-urlencoded");
+	HttpRequest->SetHeader("X-Token", Settings->ApiKey);
+	HttpRequest->SetHeader("Content-Type", "application/x-www-form-urlencoded");
 
 	Exposure = Exposure.ToLower();
 	if (Expiration == "Never")
@@ -34,7 +34,7 @@ void Api::CreateBlueprint(TFunction<void(FString, TSharedPtr<FJsonObject>)> OnSu
 	{
 		Expiration = "604800";
 	}
-	
+
 	const FString PostContent = FString::Printf(TEXT("title=%s&exposure=%s&expiration=%s&version=%s&blueprint=%s"),
 		*FGenericPlatformHttp::UrlEncode(Title),
 		*FGenericPlatformHttp::UrlEncode(Exposure),
@@ -43,7 +43,7 @@ void Api::CreateBlueprint(TFunction<void(FString, TSharedPtr<FJsonObject>)> OnSu
 		*FGenericPlatformHttp::UrlEncode(Blueprint)
 	);
 	HttpRequest->SetContentAsString(PostContent);
-	
+
 	HttpRequest->ProcessRequest();
 }
 
@@ -54,11 +54,11 @@ void Api::OnProcessRequestComplete(FHttpRequestPtr Request, FHttpResponsePtr Res
 		OnError("error");
 		return;
 	}
-	
+
 	TSharedPtr<FJsonObject> JSONObject;
 	const TSharedRef<TJsonReader<>> JSONReader = TJsonReaderFactory<>::Create(*Response->GetContentAsString());
 	FJsonSerializer::Deserialize(JSONReader, JSONObject);
-	
+
 	if (Response->GetResponseCode() >= 400)
 	{
 		if (JSONObject)
