@@ -5,7 +5,7 @@ It is necessary to have an account in order to get the API key on your profile p
 
 Feel free to contribute.
 
-Works on Unreal Engine `4.26` , `4.27` , `5.0` , `5.1` , `5.2` , `5.3` , `5.4`
+Works on Unreal Engine `4.26` , `4.27` , `5.0` , `5.1` , `5.2` , `5.3` , `5.4` , `5.5`
 
 ## How to install it?
 1. download zip file: https://github.com/blueprintue/blueprintue-cpp-plugin/archive/refs/heads/master.zip
